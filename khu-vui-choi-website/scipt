@@ -1,0 +1,7 @@
+# script: tong_hop_ps1
+# tac gia: Hoang Van Trai 
+# Ngày Tạo: 11/11/2026
+write-host "Dang tao bao cao..."
+"===BAO CAO SU CO WEBSITE ===" > ".\log\tong_hop.txt" 
+get-content ".\log\order.log" | "select-string "status=404" >> .\log\tong_hop.txt 
+get-content ".\log\order.log" | "select-string "status=500" >> .\log\tong_hop.txt 
